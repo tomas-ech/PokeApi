@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CurrentPokemonView : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Image currentImage;
+    [SerializeField] private TextMeshProUGUI currentNumber;
+    [SerializeField] private TextMeshProUGUI currentName;
+    [SerializeField] private TextMeshProUGUI[] currentType;
 
-    // Update is called once per frame
-    void Update()
+    public void SetCurrenPokemonData(PokemonData pokemonData)
     {
-        
+        currentNumber.text = pokemonData.id.ToString();
+        currentName.text = pokemonData.name;
+
+        for (int i = 0; i < pokemonData.types.Count; i++)
+        {
+            currentType[i].gameObject.SetActive(true);
+            currentType[i].text = pokemonData.types[i].type.ToString();
+        }
     }
+    
 }
