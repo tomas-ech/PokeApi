@@ -1,7 +1,6 @@
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
-using Newtonsoft;
 using Newtonsoft.Json;
 
 public class PokedexController : MonoBehaviour
@@ -13,13 +12,13 @@ public class PokedexController : MonoBehaviour
 
     private void Start()
     {
-        GetEndpointData($"https://pokeapi.co/api/v2/pokemon/1/");
+        GetEndpointData($"https://pokeapi.co/api/v2/pokemon/9/");
     }
 
     [ContextMenu("Call Pokedex Data")]
     public async void GetEndpointData(string endpointURL)
     {
-        using var currentWebRequest = UnityWebRequest.Get(endpointURL);
+        UnityWebRequest currentWebRequest = UnityWebRequest.Get(endpointURL);
 
         currentWebRequest.SetRequestHeader("Content-Type", "application/json");
 
@@ -32,8 +31,9 @@ public class PokedexController : MonoBehaviour
 
         if (currentWebRequest.result == UnityWebRequest.Result.Success)
         {
-            PokemonData deserializedResponse = default;
+            PokemonData deserializedResponse;
             deserializedResponse = JsonConvert.DeserializeObject<PokemonData>(currentWebRequest.downloadHandler.text);
+            Debug.Log(deserializedResponse.name);
             currentPokemonView.SetCurrenPokemonData(deserializedResponse);
         }
         else
