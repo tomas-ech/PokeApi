@@ -1,18 +1,20 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class StatsView : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private StatPreview[] statPreviews;
+
+    private void Awake()
     {
-        
+        statPreviews = GetComponentsInChildren<StatPreview>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetStatsBar(List<Stat> statList)
     {
-        
+        for (int i = 0; i < statList.Count; i++)
+        {
+            statPreviews[i].SetStatData(statList[i]);
+        }
     }
 }

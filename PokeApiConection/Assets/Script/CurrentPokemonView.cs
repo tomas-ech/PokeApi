@@ -13,7 +13,7 @@ public class CurrentPokemonView : MonoBehaviour
 
     public void SetCurrenPokemonData(PokemonData pokemonData)
     {
-        currentNumber.text = pokemonData.id.ToString();
+        currentNumber.text = $"N° {pokemonData.id}";
         currentName.text = pokemonData.name;
 
         DeactivateTypes();
@@ -38,7 +38,4 @@ public class CurrentPokemonView : MonoBehaviour
     {
         currentImage.sprite = loadedSprite;
     }
-
-    
-    
 }
