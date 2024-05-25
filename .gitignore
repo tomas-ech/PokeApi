@@ -2,20 +2,20 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
-/[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
-/[Ll]ogs/
-/[Uu]ser[Ss]ettings/
+/PokeApiConection/[Ll]ibrary/
+/PokeApiConection/[Tt]emp/
+/PokeApiConection/[Oo]bj/
+/PokeApiConection/[Bb]uild/
+/PokeApiConection/[Bb]uilds/
+/PokeApiConection/[Ll]ogs/
+/PokeApiConection/[Uu]ser[Ss]ettings/
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
-/[Mm]emoryCaptures/
+/PokeApiConection/[Mm]emoryCaptures/
 
 # Recordings can get excessive in size
-/[Rr]ecordings/
+/PokeApiConection/[Rr]ecordings/
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
 # /[Aa]ssets/AssetStoreTools*
@@ -65,11 +65,12 @@ sysinfo.txt
 crashlytics-build.properties
 
 # Packed Addressables
-/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+/PokeApiConection/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
 
 # Temporary auto-generated Android Assets
-/[Aa]ssets/[Ss]treamingAssets/aa.meta
-/[Aa]ssets/[Ss]treamingAssets/aa/*
+/PokeApiConection/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/PokeApiConection/[Aa]ssets/[Ss]treamingAssets/aa/*
 *.dll
 *.rsp
 /PokeApiConection/Library/Bee
+/PokeApiConection/Library
