@@ -1,10 +1,8 @@
-using System.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.Networking;
-using Newtonsoft.Json;
 
 public class PokedexController : MonoBehaviour
 {
+    public int amountOfPokemon = 20;
     public int pokemonToShow;
     [SerializeField] private StatsView statsView;
     [SerializeField] private ContentView contentView;
@@ -13,19 +11,34 @@ public class PokedexController : MonoBehaviour
 
     private void Start()
     {
-        SetInitialPokemon();
+        Initialize();
     }
 
     [ContextMenu("SetPokemon")]
     private void SetInitialPokemon()
     {
-        PokeApiManager.GetEndpointData<PokemonData>($"https://pokeapi.co/api/v2/pokemon/{pokemonToShow}/", OnCompleteData);
+        SetCurrentPokemon($"https://pokeapi.co/api/v2/pokemon/{pokemonToShow}");
+    }
+
+    private void Initialize()
+    {
+        PokeApiManager.GetEndpointData<PokemonByPage>($"https://pokeapi.co/api/v2/pokemon/?limit={amountOfPokemon}", OnInitilize);
+    }
+
+    private void OnInitilize(PokemonByPage pokemonList)
+    {
+        contentView.SetPokemonAlbum(pokemonList.results, SetCurrentPokemon);
+        SetCurrentPokemon(pokemonList.results[pokemonToShow].url);
+    }
+
+    private void SetCurrentPokemon(string url)
+    {
+        PokeApiManager.GetEndpointData<PokemonData>(url, OnCompleteData);
     }
 
     private void OnCompleteData(PokemonData pokemonData)
     {
         currentPokemonView.SetCurrenPokemonData(pokemonData);
+        statsView.SetStatsBar(pokemonData.stats);
     }
-
-    
 }

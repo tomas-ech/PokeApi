@@ -2,14 +2,12 @@ using System.Threading.Tasks;
 using UnityEngine.Networking;
 using Newtonsoft.Json;
 using UnityEngine;
-using UnityEngine.UI;
-using Unity.VisualScripting;
 using System;
 
 public static class PokeApiManager
 {
 
-    public static async void GetEndpointData<T>(string endpointURL, Action<T> OnSucces)
+    public static async void GetEndpointData<T>(string endpointURL, Action<T> OnSucces = null)
     {
         UnityWebRequest currentWebRequest = UnityWebRequest.Get(endpointURL);
 

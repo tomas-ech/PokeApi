@@ -1,6 +1,6 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 [CreateAssetMenu(fileName = "PokemonData", menuName = "ScriptableObjects/PokemonData")]
 public class PokemonDataModel : ScriptableObject
@@ -8,8 +8,22 @@ public class PokemonDataModel : ScriptableObject
     public int podekexNumber;
     public string pokemonName;
     public List<Type> types;
+    public List<Stat> stats;
+    public List<PokemonAlbumData> results;
 }
 
+[Serializable]
+public class PokemonByPage
+{
+    public List<PokemonAlbumData> results;
+}
+
+[Serializable]
+public class PokemonAlbumData
+{
+    public string name;
+    public string url;
+}
 
 [Serializable]
 public class PokemonData
@@ -18,6 +32,7 @@ public class PokemonData
     public string name;
     public Sprites sprites;
     public List<Type> types;
+    public List<Stat> stats;
 }
 
 [Serializable]
@@ -37,6 +52,19 @@ public class Type
 
 [Serializable]
 public class PokemonType
+{
+    public string name;
+}
+
+[Serializable]
+public class Stat
+{
+    public float base_stat;
+    public StatName stat;
+}
+
+[Serializable]
+public class StatName
 {
     public string name;
 }
