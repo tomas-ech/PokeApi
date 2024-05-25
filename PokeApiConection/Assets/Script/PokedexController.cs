@@ -5,41 +5,27 @@ using Newtonsoft.Json;
 
 public class PokedexController : MonoBehaviour
 {
+    public int pokemonToShow;
     [SerializeField] private StatsView statsView;
     [SerializeField] private ContentView contentView;
     [SerializeField] private CurrentPokemonView currentPokemonView;
-    [SerializeField] PokemonDataModel currentPokemonData;
+    [SerializeField] PokemonDataModel currentPokemonData;    
 
     private void Start()
     {
-        GetEndpointData($"https://pokeapi.co/api/v2/pokemon/9/");
+        SetInitialPokemon();
     }
 
-    [ContextMenu("Call Pokedex Data")]
-    public async void GetEndpointData(string endpointURL)
+    [ContextMenu("SetPokemon")]
+    private void SetInitialPokemon()
     {
-        UnityWebRequest currentWebRequest = UnityWebRequest.Get(endpointURL);
-
-        currentWebRequest.SetRequestHeader("Content-Type", "application/json");
-
-        var response = currentWebRequest.SendWebRequest();
-
-        while (!response.isDone)
-        {
-            await Task.Yield();
-        }
-
-        if (currentWebRequest.result == UnityWebRequest.Result.Success)
-        {
-            PokemonData deserializedResponse;
-            deserializedResponse = JsonConvert.DeserializeObject<PokemonData>(currentWebRequest.downloadHandler.text);
-            Debug.Log(deserializedResponse.name);
-            currentPokemonView.SetCurrenPokemonData(deserializedResponse);
-        }
-        else
-        {
-            Debug.Log($"Failed: {currentWebRequest.error}");
-        }
-
+        PokeApiManager.GetEndpointData<PokemonData>($"https://pokeapi.co/api/v2/pokemon/{pokemonToShow}/", OnCompleteData);
     }
+
+    private void OnCompleteData(PokemonData pokemonData)
+    {
+        currentPokemonView.SetCurrenPokemonData(pokemonData);
+    }
+
+    
 }
