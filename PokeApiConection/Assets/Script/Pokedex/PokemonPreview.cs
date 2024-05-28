@@ -35,7 +35,7 @@ public class PokemonPreview : MonoBehaviour
             pokemonImage.color = Color.white;
         });
         
-        pokemonStrings[0].text = $"N° {pokemonId}";
+        pokemonStrings[0].text = $"NÂ° {pokemonId}";
         pokemonStrings[1].text = pokemonData.name;
     }
 }

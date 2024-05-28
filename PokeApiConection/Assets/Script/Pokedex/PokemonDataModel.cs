@@ -4,12 +4,9 @@ using System;
 
 [CreateAssetMenu(fileName = "PokemonData", menuName = "ScriptableObjects/PokemonData")]
 public class PokemonDataModel : ScriptableObject
-{
-    public int podekexNumber;
-    public string pokemonName;
-    public List<Type> types;
-    public List<Stat> stats;
-    public List<PokemonAlbumData> results;
+{    
+    public string pokemonUrl;
+    public List<PokemonData> requestedPokemonData;
 }
 
 [Serializable]
