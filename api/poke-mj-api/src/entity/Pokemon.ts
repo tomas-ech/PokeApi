@@ -10,6 +10,9 @@ export class Pokemon {
     @Column()
     pokedexID: number
 
+    @Column()
+    nombre: string
+
     @Column({
         type: "enum",
         enum: TypePokemonEnum,
@@ -25,7 +28,33 @@ export class Pokemon {
     })
     type2: TypePokemonEnum
 
+    @Column({
+        default: 0
+    })
+    health: number
 
-    @Column()
-    nombre: string
+    @Column({
+        default: 0
+    })
+    attack: number
+
+    @Column({
+        default: 0
+    })
+    special_attack: number
+
+    @Column({
+        default: 0
+    })
+    defense: number
+
+    @Column({
+        default: 0
+    })
+    special_defense: number
+
+    @Column({
+        default: 0
+    })
+    speed: number
 }
