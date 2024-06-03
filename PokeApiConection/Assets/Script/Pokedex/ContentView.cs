@@ -6,6 +6,11 @@ public class ContentView : MonoBehaviour
 {
     [SerializeField] private PokemonPreview pokemonPreview;
 
+    /// <summary>
+    /// Spawn all the pokemon cards
+    /// </summary>
+    /// <param name="results">List with all the pokemon data</param>
+    /// <param name="onClickPokemon">Function when clicking the pokemon card</param>
     public void SetPokemonAlbum(List<PokemonAlbumData> results, Action<string> onClickPokemon)
     {
         for (int i = 0; i < results.Count; i++)

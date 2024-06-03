@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae092bbc00333664ea664a06c1960101, type: 3}
   m_Name: PokemonData
   m_EditorClassIdentifier: 
-  podekexNumber: 1
-  pokemonName: bulbasaur
-  types: []
+  pokemonUrl: 
+  requestedPokemonData: []

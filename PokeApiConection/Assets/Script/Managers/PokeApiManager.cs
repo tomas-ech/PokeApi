@@ -3,6 +3,9 @@ using UnityEngine.Networking;
 using Newtonsoft.Json;
 using UnityEngine;
 using System;
+using GraphQlClient.Core;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public static class PokeApiManager
 {
@@ -51,5 +54,17 @@ public static class PokeApiManager
             spriteToSend = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(texture.width / 2, texture.height / 2));
             OnSucces?.Invoke(spriteToSend);
         }
+    }
+
+    public static async void CallGraphQLPokeApi<T>(GraphApi graphApi, string queryName, Action<T> OnSucces = null)
+    {
+        GraphApi.Query query = graphApi.GetQueryByName(queryName, GraphApi.Query.Type.Query);
+        UnityWebRequest request = await graphApi.Post(query);
+
+        string data = request.downloadHandler.text;
+
+        T jsonPokemon = JsonConvert.DeserializeObject<T>(data);
+
+        OnSucces?.Invoke(jsonPokemon);
     }
 }

@@ -1,0 +1,960 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ccf793b7ca1cc645b9cd36d753b8e3c, type: 3}
+  m_Name: PokemonReference
+  m_EditorClassIdentifier: 
+  url: https://beta.pokeapi.co/graphql/v1beta
+  queries:
+  - name: AllPokemon
+    type: 0
+    query: "query AllPokemon{\n    pokemon_v2_pokemon{\n        id\n        name\n       
+      pokemon_v2_pokemontypes{\n            pokemon_v2_type{\n                name\n           
+      }\n        }\n        pokemon_v2_pokemonstats{\n            base_stat\n           
+      pokemon_v2_stat{\n                name\n            }\n        }\n    }\n}"
+    queryString: pokemon_v2_pokemon
+    returnType: pokemon_v2_pokemon
+    queryOptions:
+    - pokemon_v2_ability
+    - pokemon_v2_ability_aggregate
+    - pokemon_v2_ability_by_pk
+    - pokemon_v2_abilitychange
+    - pokemon_v2_abilitychange_aggregate
+    - pokemon_v2_abilitychange_by_pk
+    - pokemon_v2_abilitychangeeffecttext
+    - pokemon_v2_abilitychangeeffecttext_aggregate
+    - pokemon_v2_abilitychangeeffecttext_by_pk
+    - pokemon_v2_abilityeffecttext
+    - pokemon_v2_abilityeffecttext_aggregate
+    - pokemon_v2_abilityeffecttext_by_pk
+    - pokemon_v2_abilityflavortext
+    - pokemon_v2_abilityflavortext_aggregate
+    - pokemon_v2_abilityflavortext_by_pk
+    - pokemon_v2_abilityname
+    - pokemon_v2_abilityname_aggregate
+    - pokemon_v2_abilityname_by_pk
+    - pokemon_v2_berry
+    - pokemon_v2_berry_aggregate
+    - pokemon_v2_berry_by_pk
+    - pokemon_v2_berryfirmness
+    - pokemon_v2_berryfirmness_aggregate
+    - pokemon_v2_berryfirmness_by_pk
+    - pokemon_v2_berryfirmnessname
+    - pokemon_v2_berryfirmnessname_aggregate
+    - pokemon_v2_berryfirmnessname_by_pk
+    - pokemon_v2_berryflavor
+    - pokemon_v2_berryflavor_aggregate
+    - pokemon_v2_berryflavor_by_pk
+    - pokemon_v2_berryflavormap
+    - pokemon_v2_berryflavormap_aggregate
+    - pokemon_v2_berryflavormap_by_pk
+    - pokemon_v2_berryflavorname
+    - pokemon_v2_berryflavorname_aggregate
+    - pokemon_v2_berryflavorname_by_pk
+    - pokemon_v2_characteristic
+    - pokemon_v2_characteristic_aggregate
+    - pokemon_v2_characteristic_by_pk
+    - pokemon_v2_characteristicdescription
+    - pokemon_v2_characteristicdescription_aggregate
+    - pokemon_v2_characteristicdescription_by_pk
+    - pokemon_v2_contestcombo
+    - pokemon_v2_contestcombo_aggregate
+    - pokemon_v2_contestcombo_by_pk
+    - pokemon_v2_contesteffect
+    - pokemon_v2_contesteffect_aggregate
+    - pokemon_v2_contesteffect_by_pk
+    - pokemon_v2_contesteffecteffecttext
+    - pokemon_v2_contesteffecteffecttext_aggregate
+    - pokemon_v2_contesteffecteffecttext_by_pk
+    - pokemon_v2_contesteffectflavortext
+    - pokemon_v2_contesteffectflavortext_aggregate
+    - pokemon_v2_contesteffectflavortext_by_pk
+    - pokemon_v2_contesttype
+    - pokemon_v2_contesttype_aggregate
+    - pokemon_v2_contesttype_by_pk
+    - pokemon_v2_contesttypename
+    - pokemon_v2_contesttypename_aggregate
+    - pokemon_v2_contesttypename_by_pk
+    - pokemon_v2_egggroup
+    - pokemon_v2_egggroup_aggregate
+    - pokemon_v2_egggroup_by_pk
+    - pokemon_v2_egggroupname
+    - pokemon_v2_egggroupname_aggregate
+    - pokemon_v2_egggroupname_by_pk
+    - pokemon_v2_encounter
+    - pokemon_v2_encounter_aggregate
+    - pokemon_v2_encounter_by_pk
+    - pokemon_v2_encountercondition
+    - pokemon_v2_encountercondition_aggregate
+    - pokemon_v2_encountercondition_by_pk
+    - pokemon_v2_encounterconditionname
+    - pokemon_v2_encounterconditionname_aggregate
+    - pokemon_v2_encounterconditionname_by_pk
+    - pokemon_v2_encounterconditionvalue
+    - pokemon_v2_encounterconditionvalue_aggregate
+    - pokemon_v2_encounterconditionvalue_by_pk
+    - pokemon_v2_encounterconditionvaluemap
+    - pokemon_v2_encounterconditionvaluemap_aggregate
+    - pokemon_v2_encounterconditionvaluemap_by_pk
+    - pokemon_v2_encounterconditionvaluename
+    - pokemon_v2_encounterconditionvaluename_aggregate
+    - pokemon_v2_encounterconditionvaluename_by_pk
+    - pokemon_v2_encountermethod
+    - pokemon_v2_encountermethod_aggregate
+    - pokemon_v2_encountermethod_by_pk
+    - pokemon_v2_encountermethodname
+    - pokemon_v2_encountermethodname_aggregate
+    - pokemon_v2_encountermethodname_by_pk
+    - pokemon_v2_encounterslot
+    - pokemon_v2_encounterslot_aggregate
+    - pokemon_v2_encounterslot_by_pk
+    - pokemon_v2_evolutionchain
+    - pokemon_v2_evolutionchain_aggregate
+    - pokemon_v2_evolutionchain_by_pk
+    - pokemon_v2_evolutiontrigger
+    - pokemon_v2_evolutiontrigger_aggregate
+    - pokemon_v2_evolutiontrigger_by_pk
+    - pokemon_v2_evolutiontriggername
+    - pokemon_v2_evolutiontriggername_aggregate
+    - pokemon_v2_evolutiontriggername_by_pk
+    - pokemon_v2_experience
+    - pokemon_v2_experience_aggregate
+    - pokemon_v2_experience_by_pk
+    - pokemon_v2_gender
+    - pokemon_v2_gender_aggregate
+    - pokemon_v2_gender_by_pk
+    - pokemon_v2_generation
+    - pokemon_v2_generation_aggregate
+    - pokemon_v2_generation_by_pk
+    - pokemon_v2_generationname
+    - pokemon_v2_generationname_aggregate
+    - pokemon_v2_generationname_by_pk
+    - pokemon_v2_growthrate
+    - pokemon_v2_growthrate_aggregate
+    - pokemon_v2_growthrate_by_pk
+    - pokemon_v2_growthratedescription
+    - pokemon_v2_growthratedescription_aggregate
+    - pokemon_v2_growthratedescription_by_pk
+    - pokemon_v2_item
+    - pokemon_v2_item_aggregate
+    - pokemon_v2_item_by_pk
+    - pokemon_v2_itemattribute
+    - pokemon_v2_itemattribute_aggregate
+    - pokemon_v2_itemattribute_by_pk
+    - pokemon_v2_itemattributedescription
+    - pokemon_v2_itemattributedescription_aggregate
+    - pokemon_v2_itemattributedescription_by_pk
+    - pokemon_v2_itemattributemap
+    - pokemon_v2_itemattributemap_aggregate
+    - pokemon_v2_itemattributemap_by_pk
+    - pokemon_v2_itemattributename
+    - pokemon_v2_itemattributename_aggregate
+    - pokemon_v2_itemattributename_by_pk
+    - pokemon_v2_itemcategory
+    - pokemon_v2_itemcategory_aggregate
+    - pokemon_v2_itemcategory_by_pk
+    - pokemon_v2_itemcategoryname
+    - pokemon_v2_itemcategoryname_aggregate
+    - pokemon_v2_itemcategoryname_by_pk
+    - pokemon_v2_itemeffecttext
+    - pokemon_v2_itemeffecttext_aggregate
+    - pokemon_v2_itemeffecttext_by_pk
+    - pokemon_v2_itemflavortext
+    - pokemon_v2_itemflavortext_aggregate
+    - pokemon_v2_itemflavortext_by_pk
+    - pokemon_v2_itemflingeffect
+    - pokemon_v2_itemflingeffect_aggregate
+    - pokemon_v2_itemflingeffect_by_pk
+    - pokemon_v2_itemflingeffecteffecttext
+    - pokemon_v2_itemflingeffecteffecttext_aggregate
+    - pokemon_v2_itemflingeffecteffecttext_by_pk
+    - pokemon_v2_itemgameindex
+    - pokemon_v2_itemgameindex_aggregate
+    - pokemon_v2_itemgameindex_by_pk
+    - pokemon_v2_itemname
+    - pokemon_v2_itemname_aggregate
+    - pokemon_v2_itemname_by_pk
+    - pokemon_v2_itempocket
+    - pokemon_v2_itempocket_aggregate
+    - pokemon_v2_itempocket_by_pk
+    - pokemon_v2_itempocketname
+    - pokemon_v2_itempocketname_aggregate
+    - pokemon_v2_itempocketname_by_pk
+    - pokemon_v2_itemsprites
+    - pokemon_v2_itemsprites_aggregate
+    - pokemon_v2_itemsprites_by_pk
+    - pokemon_v2_language
+    - pokemon_v2_language_aggregate
+    - pokemon_v2_language_by_pk
+    - pokemon_v2_languagename
+    - pokemon_v2_languagename_aggregate
+    - pokemon_v2_languagename_by_pk
+    - pokemon_v2_location
+    - pokemon_v2_location_aggregate
+    - pokemon_v2_location_by_pk
+    - pokemon_v2_locationarea
+    - pokemon_v2_locationarea_aggregate
+    - pokemon_v2_locationarea_by_pk
+    - pokemon_v2_locationareaencounterrate
+    - pokemon_v2_locationareaencounterrate_aggregate
+    - pokemon_v2_locationareaencounterrate_by_pk
+    - pokemon_v2_locationareaname
+    - pokemon_v2_locationareaname_aggregate
+    - pokemon_v2_locationareaname_by_pk
+    - pokemon_v2_locationgameindex
+    - pokemon_v2_locationgameindex_aggregate
+    - pokemon_v2_locationgameindex_by_pk
+    - pokemon_v2_locationname
+    - pokemon_v2_locationname_aggregate
+    - pokemon_v2_locationname_by_pk
+    - pokemon_v2_machine
+    - pokemon_v2_machine_aggregate
+    - pokemon_v2_machine_by_pk
+    - pokemon_v2_move
+    - pokemon_v2_move_aggregate
+    - pokemon_v2_move_by_pk
+    - pokemon_v2_moveattribute
+    - pokemon_v2_moveattribute_aggregate
+    - pokemon_v2_moveattribute_by_pk
+    - pokemon_v2_moveattributedescription
+    - pokemon_v2_moveattributedescription_aggregate
+    - pokemon_v2_moveattributedescription_by_pk
+    - pokemon_v2_moveattributemap
+    - pokemon_v2_moveattributemap_aggregate
+    - pokemon_v2_moveattributemap_by_pk
+    - pokemon_v2_moveattributename
+    - pokemon_v2_moveattributename_aggregate
+    - pokemon_v2_moveattributename_by_pk
+    - pokemon_v2_movebattlestyle
+    - pokemon_v2_movebattlestyle_aggregate
+    - pokemon_v2_movebattlestyle_by_pk
+    - pokemon_v2_movebattlestylename
+    - pokemon_v2_movebattlestylename_aggregate
+    - pokemon_v2_movebattlestylename_by_pk
+    - pokemon_v2_movechange
+    - pokemon_v2_movechange_aggregate
+    - pokemon_v2_movechange_by_pk
+    - pokemon_v2_movedamageclass
+    - pokemon_v2_movedamageclass_aggregate
+    - pokemon_v2_movedamageclass_by_pk
+    - pokemon_v2_movedamageclassdescription
+    - pokemon_v2_movedamageclassdescription_aggregate
+    - pokemon_v2_movedamageclassdescription_by_pk
+    - pokemon_v2_movedamageclassname
+    - pokemon_v2_movedamageclassname_aggregate
+    - pokemon_v2_movedamageclassname_by_pk
+    - pokemon_v2_moveeffect
+    - pokemon_v2_moveeffect_aggregate
+    - pokemon_v2_moveeffect_by_pk
+    - pokemon_v2_moveeffectchange
+    - pokemon_v2_moveeffectchange_aggregate
+    - pokemon_v2_moveeffectchange_by_pk
+    - pokemon_v2_moveeffectchangeeffecttext
+    - pokemon_v2_moveeffectchangeeffecttext_aggregate
+    - pokemon_v2_moveeffectchangeeffecttext_by_pk
+    - pokemon_v2_moveeffecteffecttext
+    - pokemon_v2_moveeffecteffecttext_aggregate
+    - pokemon_v2_moveeffecteffecttext_by_pk
+    - pokemon_v2_moveflavortext
+    - pokemon_v2_moveflavortext_aggregate
+    - pokemon_v2_moveflavortext_by_pk
+    - pokemon_v2_movelearnmethod
+    - pokemon_v2_movelearnmethod_aggregate
+    - pokemon_v2_movelearnmethod_by_pk
+    - pokemon_v2_movelearnmethoddescription
+    - pokemon_v2_movelearnmethoddescription_aggregate
+    - pokemon_v2_movelearnmethoddescription_by_pk
+    - pokemon_v2_movelearnmethodname
+    - pokemon_v2_movelearnmethodname_aggregate
+    - pokemon_v2_movelearnmethodname_by_pk
+    - pokemon_v2_movemeta
+    - pokemon_v2_movemeta_aggregate
+    - pokemon_v2_movemeta_by_pk
+    - pokemon_v2_movemetaailment
+    - pokemon_v2_movemetaailment_aggregate
+    - pokemon_v2_movemetaailment_by_pk
+    - pokemon_v2_movemetaailmentname
+    - pokemon_v2_movemetaailmentname_aggregate
+    - pokemon_v2_movemetaailmentname_by_pk
+    - pokemon_v2_movemetacategory
+    - pokemon_v2_movemetacategory_aggregate
+    - pokemon_v2_movemetacategory_by_pk
+    - pokemon_v2_movemetacategorydescription
+    - pokemon_v2_movemetacategorydescription_aggregate
+    - pokemon_v2_movemetacategorydescription_by_pk
+    - pokemon_v2_movemetastatchange
+    - pokemon_v2_movemetastatchange_aggregate
+    - pokemon_v2_movemetastatchange_by_pk
+    - pokemon_v2_movename
+    - pokemon_v2_movename_aggregate
+    - pokemon_v2_movename_by_pk
+    - pokemon_v2_movetarget
+    - pokemon_v2_movetarget_aggregate
+    - pokemon_v2_movetarget_by_pk
+    - pokemon_v2_movetargetdescription
+    - pokemon_v2_movetargetdescription_aggregate
+    - pokemon_v2_movetargetdescription_by_pk
+    - pokemon_v2_movetargetname
+    - pokemon_v2_movetargetname_aggregate
+    - pokemon_v2_movetargetname_by_pk
+    - pokemon_v2_nature
+    - pokemon_v2_nature_aggregate
+    - pokemon_v2_nature_by_pk
+    - pokemon_v2_naturebattlestylepreference
+    - pokemon_v2_naturebattlestylepreference_aggregate
+    - pokemon_v2_naturebattlestylepreference_by_pk
+    - pokemon_v2_naturename
+    - pokemon_v2_naturename_aggregate
+    - pokemon_v2_naturename_by_pk
+    - pokemon_v2_naturepokeathlonstat
+    - pokemon_v2_naturepokeathlonstat_aggregate
+    - pokemon_v2_naturepokeathlonstat_by_pk
+    - pokemon_v2_palpark
+    - pokemon_v2_palpark_aggregate
+    - pokemon_v2_palpark_by_pk
+    - pokemon_v2_palparkarea
+    - pokemon_v2_palparkarea_aggregate
+    - pokemon_v2_palparkarea_by_pk
+    - pokemon_v2_palparkareaname
+    - pokemon_v2_palparkareaname_aggregate
+    - pokemon_v2_palparkareaname_by_pk
+    - pokemon_v2_pokeathlonstat
+    - pokemon_v2_pokeathlonstat_aggregate
+    - pokemon_v2_pokeathlonstat_by_pk
+    - pokemon_v2_pokeathlonstatname
+    - pokemon_v2_pokeathlonstatname_aggregate
+    - pokemon_v2_pokeathlonstatname_by_pk
+    - pokemon_v2_pokedex
+    - pokemon_v2_pokedex_aggregate
+    - pokemon_v2_pokedex_by_pk
+    - pokemon_v2_pokedexdescription
+    - pokemon_v2_pokedexdescription_aggregate
+    - pokemon_v2_pokedexdescription_by_pk
+    - pokemon_v2_pokedexname
+    - pokemon_v2_pokedexname_aggregate
+    - pokemon_v2_pokedexname_by_pk
+    - pokemon_v2_pokedexversiongroup
+    - pokemon_v2_pokedexversiongroup_aggregate
+    - pokemon_v2_pokedexversiongroup_by_pk
+    - pokemon_v2_pokemon
+    - pokemon_v2_pokemon_aggregate
+    - pokemon_v2_pokemon_by_pk
+    - pokemon_v2_pokemonability
+    - pokemon_v2_pokemonability_aggregate
+    - pokemon_v2_pokemonability_by_pk
+    - pokemon_v2_pokemonabilitypast
+    - pokemon_v2_pokemonabilitypast_aggregate
+    - pokemon_v2_pokemonabilitypast_by_pk
+    - pokemon_v2_pokemoncolor
+    - pokemon_v2_pokemoncolor_aggregate
+    - pokemon_v2_pokemoncolor_by_pk
+    - pokemon_v2_pokemoncolorname
+    - pokemon_v2_pokemoncolorname_aggregate
+    - pokemon_v2_pokemoncolorname_by_pk
+    - pokemon_v2_pokemoncries
+    - pokemon_v2_pokemoncries_aggregate
+    - pokemon_v2_pokemoncries_by_pk
+    - pokemon_v2_pokemondexnumber
+    - pokemon_v2_pokemondexnumber_aggregate
+    - pokemon_v2_pokemondexnumber_by_pk
+    - pokemon_v2_pokemonegggroup
+    - pokemon_v2_pokemonegggroup_aggregate
+    - pokemon_v2_pokemonegggroup_by_pk
+    - pokemon_v2_pokemonevolution
+    - pokemon_v2_pokemonevolution_aggregate
+    - pokemon_v2_pokemonevolution_by_pk
+    - pokemon_v2_pokemonform
+    - pokemon_v2_pokemonform_aggregate
+    - pokemon_v2_pokemonform_by_pk
+    - pokemon_v2_pokemonformgeneration
+    - pokemon_v2_pokemonformgeneration_aggregate
+    - pokemon_v2_pokemonformgeneration_by_pk
+    - pokemon_v2_pokemonformname
+    - pokemon_v2_pokemonformname_aggregate
+    - pokemon_v2_pokemonformname_by_pk
+    - pokemon_v2_pokemonformsprites
+    - pokemon_v2_pokemonformsprites_aggregate
+    - pokemon_v2_pokemonformsprites_by_pk
+    - pokemon_v2_pokemonformtype
+    - pokemon_v2_pokemonformtype_aggregate
+    - pokemon_v2_pokemonformtype_by_pk
+    - pokemon_v2_pokemongameindex
+    - pokemon_v2_pokemongameindex_aggregate
+    - pokemon_v2_pokemongameindex_by_pk
+    - pokemon_v2_pokemonhabitat
+    - pokemon_v2_pokemonhabitat_aggregate
+    - pokemon_v2_pokemonhabitat_by_pk
+    - pokemon_v2_pokemonhabitatname
+    - pokemon_v2_pokemonhabitatname_aggregate
+    - pokemon_v2_pokemonhabitatname_by_pk
+    - pokemon_v2_pokemonitem
+    - pokemon_v2_pokemonitem_aggregate
+    - pokemon_v2_pokemonitem_by_pk
+    - pokemon_v2_pokemonmove
+    - pokemon_v2_pokemonmove_aggregate
+    - pokemon_v2_pokemonmove_by_pk
+    - pokemon_v2_pokemonshape
+    - pokemon_v2_pokemonshape_aggregate
+    - pokemon_v2_pokemonshape_by_pk
+    - pokemon_v2_pokemonshapename
+    - pokemon_v2_pokemonshapename_aggregate
+    - pokemon_v2_pokemonshapename_by_pk
+    - pokemon_v2_pokemonspecies
+    - pokemon_v2_pokemonspecies_aggregate
+    - pokemon_v2_pokemonspecies_by_pk
+    - pokemon_v2_pokemonspeciesdescription
+    - pokemon_v2_pokemonspeciesdescription_aggregate
+    - pokemon_v2_pokemonspeciesdescription_by_pk
+    - pokemon_v2_pokemonspeciesflavortext
+    - pokemon_v2_pokemonspeciesflavortext_aggregate
+    - pokemon_v2_pokemonspeciesflavortext_by_pk
+    - pokemon_v2_pokemonspeciesname
+    - pokemon_v2_pokemonspeciesname_aggregate
+    - pokemon_v2_pokemonspeciesname_by_pk
+    - pokemon_v2_pokemonsprites
+    - pokemon_v2_pokemonsprites_aggregate
+    - pokemon_v2_pokemonsprites_by_pk
+    - pokemon_v2_pokemonstat
+    - pokemon_v2_pokemonstat_aggregate
+    - pokemon_v2_pokemonstat_by_pk
+    - pokemon_v2_pokemontype
+    - pokemon_v2_pokemontype_aggregate
+    - pokemon_v2_pokemontype_by_pk
+    - pokemon_v2_pokemontypepast
+    - pokemon_v2_pokemontypepast_aggregate
+    - pokemon_v2_pokemontypepast_by_pk
+    - pokemon_v2_region
+    - pokemon_v2_region_aggregate
+    - pokemon_v2_region_by_pk
+    - pokemon_v2_regionname
+    - pokemon_v2_regionname_aggregate
+    - pokemon_v2_regionname_by_pk
+    - pokemon_v2_stat
+    - pokemon_v2_stat_aggregate
+    - pokemon_v2_stat_by_pk
+    - pokemon_v2_statname
+    - pokemon_v2_statname_aggregate
+    - pokemon_v2_statname_by_pk
+    - pokemon_v2_supercontestcombo
+    - pokemon_v2_supercontestcombo_aggregate
+    - pokemon_v2_supercontestcombo_by_pk
+    - pokemon_v2_supercontesteffect
+    - pokemon_v2_supercontesteffect_aggregate
+    - pokemon_v2_supercontesteffect_by_pk
+    - pokemon_v2_supercontesteffectflavortext
+    - pokemon_v2_supercontesteffectflavortext_aggregate
+    - pokemon_v2_supercontesteffectflavortext_by_pk
+    - pokemon_v2_type
+    - pokemon_v2_type_aggregate
+    - pokemon_v2_type_by_pk
+    - pokemon_v2_typeefficacy
+    - pokemon_v2_typeefficacy_aggregate
+    - pokemon_v2_typeefficacy_by_pk
+    - pokemon_v2_typeefficacypast
+    - pokemon_v2_typeefficacypast_aggregate
+    - pokemon_v2_typeefficacypast_by_pk
+    - pokemon_v2_typegameindex
+    - pokemon_v2_typegameindex_aggregate
+    - pokemon_v2_typegameindex_by_pk
+    - pokemon_v2_typename
+    - pokemon_v2_typename_aggregate
+    - pokemon_v2_typename_by_pk
+    - pokemon_v2_version
+    - pokemon_v2_version_aggregate
+    - pokemon_v2_version_by_pk
+    - pokemon_v2_versiongroup
+    - pokemon_v2_versiongroup_aggregate
+    - pokemon_v2_versiongroup_by_pk
+    - pokemon_v2_versiongroupmovelearnmethod
+    - pokemon_v2_versiongroupmovelearnmethod_aggregate
+    - pokemon_v2_versiongroupmovelearnmethod_by_pk
+    - pokemon_v2_versiongroupregion
+    - pokemon_v2_versiongroupregion_aggregate
+    - pokemon_v2_versiongroupregion_by_pk
+    - pokemon_v2_versionname
+    - pokemon_v2_versionname_aggregate
+    - pokemon_v2_versionname_by_pk
+    fields:
+    - index: 2
+      name: id
+      type: Int
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: base_experience
+        type: Int
+      - name: height
+        type: Int
+      - name: id
+        type: Int
+      - name: is_default
+        type: Boolean
+      - name: name
+        type: String
+      - name: order
+        type: Int
+      - name: pokemon_species_id
+        type: Int
+      - name: pokemon_v2_encounters
+        type: pokemon_v2_encounter
+      - name: pokemon_v2_encounters_aggregate
+        type: pokemon_v2_encounter_aggregate
+      - name: pokemon_v2_pokemonabilities
+        type: pokemon_v2_pokemonability
+      - name: pokemon_v2_pokemonabilities_aggregate
+        type: pokemon_v2_pokemonability_aggregate
+      - name: pokemon_v2_pokemonabilitypasts
+        type: pokemon_v2_pokemonabilitypast
+      - name: pokemon_v2_pokemonabilitypasts_aggregate
+        type: pokemon_v2_pokemonabilitypast_aggregate
+      - name: pokemon_v2_pokemoncries
+        type: pokemon_v2_pokemoncries
+      - name: pokemon_v2_pokemoncries_aggregate
+        type: pokemon_v2_pokemoncries_aggregate
+      - name: pokemon_v2_pokemonforms
+        type: pokemon_v2_pokemonform
+      - name: pokemon_v2_pokemonforms_aggregate
+        type: pokemon_v2_pokemonform_aggregate
+      - name: pokemon_v2_pokemongameindices
+        type: pokemon_v2_pokemongameindex
+      - name: pokemon_v2_pokemongameindices_aggregate
+        type: pokemon_v2_pokemongameindex_aggregate
+      - name: pokemon_v2_pokemonitems
+        type: pokemon_v2_pokemonitem
+      - name: pokemon_v2_pokemonitems_aggregate
+        type: pokemon_v2_pokemonitem_aggregate
+      - name: pokemon_v2_pokemonmoves
+        type: pokemon_v2_pokemonmove
+      - name: pokemon_v2_pokemonmoves_aggregate
+        type: pokemon_v2_pokemonmove_aggregate
+      - name: pokemon_v2_pokemonspecy
+        type: pokemon_v2_pokemonspecies
+      - name: pokemon_v2_pokemonsprites
+        type: pokemon_v2_pokemonsprites
+      - name: pokemon_v2_pokemonsprites_aggregate
+        type: pokemon_v2_pokemonsprites_aggregate
+      - name: pokemon_v2_pokemonstats
+        type: pokemon_v2_pokemonstat
+      - name: pokemon_v2_pokemonstats_aggregate
+        type: pokemon_v2_pokemonstat_aggregate
+      - name: pokemon_v2_pokemontypepasts
+        type: pokemon_v2_pokemontypepast
+      - name: pokemon_v2_pokemontypepasts_aggregate
+        type: pokemon_v2_pokemontypepast_aggregate
+      - name: pokemon_v2_pokemontypes
+        type: pokemon_v2_pokemontype
+      - name: pokemon_v2_pokemontypes_aggregate
+        type: pokemon_v2_pokemontype_aggregate
+      - name: weight
+        type: Int
+      hasChanged: 0
+    - index: 4
+      name: name
+      type: String
+      parentIndexes: 
+      hasSubField: 0
+      possibleFields:
+      - name: base_experience
+        type: Int
+      - name: height
+        type: Int
+      - name: id
+        type: Int
+      - name: is_default
+        type: Boolean
+      - name: name
+        type: String
+      - name: order
+        type: Int
+      - name: pokemon_species_id
+        type: Int
+      - name: pokemon_v2_encounters
+        type: pokemon_v2_encounter
+      - name: pokemon_v2_encounters_aggregate
+        type: pokemon_v2_encounter_aggregate
+      - name: pokemon_v2_pokemonabilities
+        type: pokemon_v2_pokemonability
+      - name: pokemon_v2_pokemonabilities_aggregate
+        type: pokemon_v2_pokemonability_aggregate
+      - name: pokemon_v2_pokemonabilitypasts
+        type: pokemon_v2_pokemonabilitypast
+      - name: pokemon_v2_pokemonabilitypasts_aggregate
+        type: pokemon_v2_pokemonabilitypast_aggregate
+      - name: pokemon_v2_pokemoncries
+        type: pokemon_v2_pokemoncries
+      - name: pokemon_v2_pokemoncries_aggregate
+        type: pokemon_v2_pokemoncries_aggregate
+      - name: pokemon_v2_pokemonforms
+        type: pokemon_v2_pokemonform
+      - name: pokemon_v2_pokemonforms_aggregate
+        type: pokemon_v2_pokemonform_aggregate
+      - name: pokemon_v2_pokemongameindices
+        type: pokemon_v2_pokemongameindex
+      - name: pokemon_v2_pokemongameindices_aggregate
+        type: pokemon_v2_pokemongameindex_aggregate
+      - name: pokemon_v2_pokemonitems
+        type: pokemon_v2_pokemonitem
+      - name: pokemon_v2_pokemonitems_aggregate
+        type: pokemon_v2_pokemonitem_aggregate
+      - name: pokemon_v2_pokemonmoves
+        type: pokemon_v2_pokemonmove
+      - name: pokemon_v2_pokemonmoves_aggregate
+        type: pokemon_v2_pokemonmove_aggregate
+      - name: pokemon_v2_pokemonspecy
+        type: pokemon_v2_pokemonspecies
+      - name: pokemon_v2_pokemonsprites
+        type: pokemon_v2_pokemonsprites
+      - name: pokemon_v2_pokemonsprites_aggregate
+        type: pokemon_v2_pokemonsprites_aggregate
+      - name: pokemon_v2_pokemonstats
+        type: pokemon_v2_pokemonstat
+      - name: pokemon_v2_pokemonstats_aggregate
+        type: pokemon_v2_pokemonstat_aggregate
+      - name: pokemon_v2_pokemontypepasts
+        type: pokemon_v2_pokemontypepast
+      - name: pokemon_v2_pokemontypepasts_aggregate
+        type: pokemon_v2_pokemontypepast_aggregate
+      - name: pokemon_v2_pokemontypes
+        type: pokemon_v2_pokemontype
+      - name: pokemon_v2_pokemontypes_aggregate
+        type: pokemon_v2_pokemontype_aggregate
+      - name: weight
+        type: Int
+      hasChanged: 0
+    - index: 30
+      name: pokemon_v2_pokemontypes
+      type: pokemon_v2_pokemontype
+      parentIndexes: 
+      hasSubField: 1
+      possibleFields:
+      - name: base_experience
+        type: Int
+      - name: height
+        type: Int
+      - name: id
+        type: Int
+      - name: is_default
+        type: Boolean
+      - name: name
+        type: String
+      - name: order
+        type: Int
+      - name: pokemon_species_id
+        type: Int
+      - name: pokemon_v2_encounters
+        type: pokemon_v2_encounter
+      - name: pokemon_v2_encounters_aggregate
+        type: pokemon_v2_encounter_aggregate
+      - name: pokemon_v2_pokemonabilities
+        type: pokemon_v2_pokemonability
+      - name: pokemon_v2_pokemonabilities_aggregate
+        type: pokemon_v2_pokemonability_aggregate
+      - name: pokemon_v2_pokemonabilitypasts
+        type: pokemon_v2_pokemonabilitypast
+      - name: pokemon_v2_pokemonabilitypasts_aggregate
+        type: pokemon_v2_pokemonabilitypast_aggregate
+      - name: pokemon_v2_pokemoncries
+        type: pokemon_v2_pokemoncries
+      - name: pokemon_v2_pokemoncries_aggregate
+        type: pokemon_v2_pokemoncries_aggregate
+      - name: pokemon_v2_pokemonforms
+        type: pokemon_v2_pokemonform
+      - name: pokemon_v2_pokemonforms_aggregate
+        type: pokemon_v2_pokemonform_aggregate
+      - name: pokemon_v2_pokemongameindices
+        type: pokemon_v2_pokemongameindex
+      - name: pokemon_v2_pokemongameindices_aggregate
+        type: pokemon_v2_pokemongameindex_aggregate
+      - name: pokemon_v2_pokemonitems
+        type: pokemon_v2_pokemonitem
+      - name: pokemon_v2_pokemonitems_aggregate
+        type: pokemon_v2_pokemonitem_aggregate
+      - name: pokemon_v2_pokemonmoves
+        type: pokemon_v2_pokemonmove
+      - name: pokemon_v2_pokemonmoves_aggregate
+        type: pokemon_v2_pokemonmove_aggregate
+      - name: pokemon_v2_pokemonspecy
+        type: pokemon_v2_pokemonspecies
+      - name: pokemon_v2_pokemonsprites
+        type: pokemon_v2_pokemonsprites
+      - name: pokemon_v2_pokemonsprites_aggregate
+        type: pokemon_v2_pokemonsprites_aggregate
+      - name: pokemon_v2_pokemonstats
+        type: pokemon_v2_pokemonstat
+      - name: pokemon_v2_pokemonstats_aggregate
+        type: pokemon_v2_pokemonstat_aggregate
+      - name: pokemon_v2_pokemontypepasts
+        type: pokemon_v2_pokemontypepast
+      - name: pokemon_v2_pokemontypepasts_aggregate
+        type: pokemon_v2_pokemontypepast_aggregate
+      - name: pokemon_v2_pokemontypes
+        type: pokemon_v2_pokemontype
+      - name: pokemon_v2_pokemontypes_aggregate
+        type: pokemon_v2_pokemontype_aggregate
+      - name: weight
+        type: Int
+      hasChanged: 0
+    - index: 3
+      name: pokemon_v2_type
+      type: pokemon_v2_type
+      parentIndexes: 02000000
+      hasSubField: 1
+      possibleFields:
+      - name: id
+        type: Int
+      - name: pokemon_id
+        type: Int
+      - name: pokemon_v2_pokemon
+        type: pokemon_v2_pokemon
+      - name: pokemon_v2_type
+        type: pokemon_v2_type
+      - name: slot
+        type: Int
+      - name: type_id
+        type: Int
+      hasChanged: 0
+    - index: 3
+      name: name
+      type: String
+      parentIndexes: 0200000003000000
+      hasSubField: 0
+      possibleFields:
+      - name: generation_id
+        type: Int
+      - name: id
+        type: Int
+      - name: move_damage_class_id
+        type: Int
+      - name: name
+        type: String
+      - name: pokemonV2PokemonevolutionsByPartyTypeId
+        type: pokemon_v2_pokemonevolution
+      - name: pokemonV2PokemonevolutionsByPartyTypeId_aggregate
+        type: pokemon_v2_pokemonevolution_aggregate
+      - name: pokemonV2TypeefficaciesByTargetTypeId
+        type: pokemon_v2_typeefficacy
+      - name: pokemonV2TypeefficaciesByTargetTypeId_aggregate
+        type: pokemon_v2_typeefficacy_aggregate
+      - name: pokemonV2TypeefficacypastsByTargetTypeId
+        type: pokemon_v2_typeefficacypast
+      - name: pokemonV2TypeefficacypastsByTargetTypeId_aggregate
+        type: pokemon_v2_typeefficacypast_aggregate
+      - name: pokemon_v2_berries
+        type: pokemon_v2_berry
+      - name: pokemon_v2_berries_aggregate
+        type: pokemon_v2_berry_aggregate
+      - name: pokemon_v2_generation
+        type: pokemon_v2_generation
+      - name: pokemon_v2_movechanges
+        type: pokemon_v2_movechange
+      - name: pokemon_v2_movechanges_aggregate
+        type: pokemon_v2_movechange_aggregate
+      - name: pokemon_v2_movedamageclass
+        type: pokemon_v2_movedamageclass
+      - name: pokemon_v2_moves
+        type: pokemon_v2_move
+      - name: pokemon_v2_moves_aggregate
+        type: pokemon_v2_move_aggregate
+      - name: pokemon_v2_pokemonevolutions
+        type: pokemon_v2_pokemonevolution
+      - name: pokemon_v2_pokemonevolutions_aggregate
+        type: pokemon_v2_pokemonevolution_aggregate
+      - name: pokemon_v2_pokemonformtypes
+        type: pokemon_v2_pokemonformtype
+      - name: pokemon_v2_pokemonformtypes_aggregate
+        type: pokemon_v2_pokemonformtype_aggregate
+      - name: pokemon_v2_pokemontypepasts
+        type: pokemon_v2_pokemontypepast
+      - name: pokemon_v2_pokemontypepasts_aggregate
+        type: pokemon_v2_pokemontypepast_aggregate
+      - name: pokemon_v2_pokemontypes
+        type: pokemon_v2_pokemontype
+      - name: pokemon_v2_pokemontypes_aggregate
+        type: pokemon_v2_pokemontype_aggregate
+      - name: pokemon_v2_typeefficacies
+        type: pokemon_v2_typeefficacy
+      - name: pokemon_v2_typeefficacies_aggregate
+        type: pokemon_v2_typeefficacy_aggregate
+      - name: pokemon_v2_typeefficacypasts
+        type: pokemon_v2_typeefficacypast
+      - name: pokemon_v2_typeefficacypasts_aggregate
+        type: pokemon_v2_typeefficacypast_aggregate
+      - name: pokemon_v2_typegameindices
+        type: pokemon_v2_typegameindex
+      - name: pokemon_v2_typegameindices_aggregate
+        type: pokemon_v2_typegameindex_aggregate
+      - name: pokemon_v2_typenames
+        type: pokemon_v2_typename
+      - name: pokemon_v2_typenames_aggregate
+        type: pokemon_v2_typename_aggregate
+      hasChanged: 0
+    - index: 26
+      name: pokemon_v2_pokemonstats
+      type: pokemon_v2_pokemonstat
+      parentIndexes: 
+      hasSubField: 1
+      possibleFields:
+      - name: base_experience
+        type: Int
+      - name: height
+        type: Int
+      - name: id
+        type: Int
+      - name: is_default
+        type: Boolean
+      - name: name
+        type: String
+      - name: order
+        type: Int
+      - name: pokemon_species_id
+        type: Int
+      - name: pokemon_v2_encounters
+        type: pokemon_v2_encounter
+      - name: pokemon_v2_encounters_aggregate
+        type: pokemon_v2_encounter_aggregate
+      - name: pokemon_v2_pokemonabilities
+        type: pokemon_v2_pokemonability
+      - name: pokemon_v2_pokemonabilities_aggregate
+        type: pokemon_v2_pokemonability_aggregate
+      - name: pokemon_v2_pokemonabilitypasts
+        type: pokemon_v2_pokemonabilitypast
+      - name: pokemon_v2_pokemonabilitypasts_aggregate
+        type: pokemon_v2_pokemonabilitypast_aggregate
+      - name: pokemon_v2_pokemoncries
+        type: pokemon_v2_pokemoncries
+      - name: pokemon_v2_pokemoncries_aggregate
+        type: pokemon_v2_pokemoncries_aggregate
+      - name: pokemon_v2_pokemonforms
+        type: pokemon_v2_pokemonform
+      - name: pokemon_v2_pokemonforms_aggregate
+        type: pokemon_v2_pokemonform_aggregate
+      - name: pokemon_v2_pokemongameindices
+        type: pokemon_v2_pokemongameindex
+      - name: pokemon_v2_pokemongameindices_aggregate
+        type: pokemon_v2_pokemongameindex_aggregate
+      - name: pokemon_v2_pokemonitems
+        type: pokemon_v2_pokemonitem
+      - name: pokemon_v2_pokemonitems_aggregate
+        type: pokemon_v2_pokemonitem_aggregate
+      - name: pokemon_v2_pokemonmoves
+        type: pokemon_v2_pokemonmove
+      - name: pokemon_v2_pokemonmoves_aggregate
+        type: pokemon_v2_pokemonmove_aggregate
+      - name: pokemon_v2_pokemonspecy
+        type: pokemon_v2_pokemonspecies
+      - name: pokemon_v2_pokemonsprites
+        type: pokemon_v2_pokemonsprites
+      - name: pokemon_v2_pokemonsprites_aggregate
+        type: pokemon_v2_pokemonsprites_aggregate
+      - name: pokemon_v2_pokemonstats
+        type: pokemon_v2_pokemonstat
+      - name: pokemon_v2_pokemonstats_aggregate
+        type: pokemon_v2_pokemonstat_aggregate
+      - name: pokemon_v2_pokemontypepasts
+        type: pokemon_v2_pokemontypepast
+      - name: pokemon_v2_pokemontypepasts_aggregate
+        type: pokemon_v2_pokemontypepast_aggregate
+      - name: pokemon_v2_pokemontypes
+        type: pokemon_v2_pokemontype
+      - name: pokemon_v2_pokemontypes_aggregate
+        type: pokemon_v2_pokemontype_aggregate
+      - name: weight
+        type: Int
+      hasChanged: 0
+    - index: 0
+      name: base_stat
+      type: Int
+      parentIndexes: 05000000
+      hasSubField: 0
+      possibleFields:
+      - name: base_stat
+        type: Int
+      - name: effort
+        type: Int
+      - name: id
+        type: Int
+      - name: pokemon_id
+        type: Int
+      - name: pokemon_v2_pokemon
+        type: pokemon_v2_pokemon
+      - name: pokemon_v2_stat
+        type: pokemon_v2_stat
+      - name: stat_id
+        type: Int
+      hasChanged: 0
+    - index: 5
+      name: pokemon_v2_stat
+      type: pokemon_v2_stat
+      parentIndexes: 05000000
+      hasSubField: 1
+      possibleFields:
+      - name: base_stat
+        type: Int
+      - name: effort
+        type: Int
+      - name: id
+        type: Int
+      - name: pokemon_id
+        type: Int
+      - name: pokemon_v2_pokemon
+        type: pokemon_v2_pokemon
+      - name: pokemon_v2_stat
+        type: pokemon_v2_stat
+      - name: stat_id
+        type: Int
+      hasChanged: 0
+    - index: 4
+      name: name
+      type: String
+      parentIndexes: 0500000007000000
+      hasSubField: 0
+      possibleFields:
+      - name: game_index
+        type: Int
+      - name: id
+        type: Int
+      - name: is_battle_only
+        type: Boolean
+      - name: move_damage_class_id
+        type: Int
+      - name: name
+        type: String
+      - name: pokemonV2NaturesByIncreasedStatId
+        type: pokemon_v2_nature
+      - name: pokemonV2NaturesByIncreasedStatId_aggregate
+        type: pokemon_v2_nature_aggregate
+      - name: pokemon_v2_characteristics
+        type: pokemon_v2_characteristic
+      - name: pokemon_v2_characteristics_aggregate
+        type: pokemon_v2_characteristic_aggregate
+      - name: pokemon_v2_movedamageclass
+        type: pokemon_v2_movedamageclass
+      - name: pokemon_v2_movemetastatchanges
+        type: pokemon_v2_movemetastatchange
+      - name: pokemon_v2_movemetastatchanges_aggregate
+        type: pokemon_v2_movemetastatchange_aggregate
+      - name: pokemon_v2_natures
+        type: pokemon_v2_nature
+      - name: pokemon_v2_natures_aggregate
+        type: pokemon_v2_nature_aggregate
+      - name: pokemon_v2_pokemonstats
+        type: pokemon_v2_pokemonstat
+      - name: pokemon_v2_pokemonstats_aggregate
+        type: pokemon_v2_pokemonstat_aggregate
+      - name: pokemon_v2_statnames
+        type: pokemon_v2_statname
+      - name: pokemon_v2_statnames_aggregate
+        type: pokemon_v2_statname_aggregate
+      hasChanged: 0
+    isComplete: 1
+  mutations: []
+  subscriptions: []
+  loading: 0

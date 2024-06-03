@@ -1,3 +1,5 @@
+using GraphQlClient.Core;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PokedexController : BaseController
@@ -5,9 +7,13 @@ public class PokedexController : BaseController
     public int amountOfPokemon = 20;
     public int pokemonToShow;
 
+    [Header("Views")]
     [SerializeField] private StatsView statsView;
     [SerializeField] private ContentView contentView;
     [SerializeField] private CurrentPokemonView currentPokemonView;
+
+    [Header("Data Models")]
+    [SerializeField] private GraphApi pokemonGraph;
     [SerializeField] PokemonDataModel currentPokemonData;        
 
     public override void InitializeController()
@@ -17,12 +23,15 @@ public class PokedexController : BaseController
 
     private void Awake()
     {
-        GetPokemonListData();
+        //TODO: pasar al initialize cuando se tenga sistema de pantalla de carga
+        //PokeApiManager.GetEndpointData<PokemonByPage>($"https://pokeapi.co/api/v2/pokemon/?limit={amountOfPokemon}", OnInitilize);
+        PokeApiManager.CallGraphQLPokeApi<PokemonByGraphQLRoot>(pokemonGraph, "AllPokemon", OnInitilize2);
     }
 
-    private void GetPokemonListData()
+    private void OnInitilize2(PokemonByGraphQLRoot pokemonList)
     {
-        PokeApiManager.GetEndpointData<PokemonByPage>($"https://pokeapi.co/api/v2/pokemon/?limit={amountOfPokemon}", OnInitilize);
+        Debug.Log(pokemonList.data.pokemon_v2_pokemon[0].name);
+        currentPokemonData.requestedPokemonData = pokemonList.data;
     }
 
     private void OnInitilize(PokemonByPage pokemonList)

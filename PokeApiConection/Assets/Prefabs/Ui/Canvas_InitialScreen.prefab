@@ -543,6 +543,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exitButton: {fileID: 2881199784418642911}
   pokedexButton: {fileID: 4582926484558035050}
+  documentationButton: {fileID: 3362211140410406866}
 --- !u!1 &6025513569885720541
 GameObject:
   m_ObjectHideFlags: 0
